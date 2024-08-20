@@ -282,6 +282,8 @@
         }
     }
 
+    const minAllowed = 35;
+
     const feedbackMode = Math.random() < 0.5 ? 'feedbackOnly' : 'reasonWithFeedback';
     // Define the callback function
     function handleSubmit(data) {
@@ -313,5 +315,5 @@
         ]
     };
 
-    new FeedbackDialog(texts, 35, feedbackMode), handleSubmit;
+    new FeedbackDialog(texts, minAllowed, feedbackMode, handleSubmit);
 })();
