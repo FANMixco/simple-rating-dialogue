@@ -1,9 +1,10 @@
 (function () {
     class FeedbackDialog {
-        constructor(texts, minAllowed, feedbackMode) {
+        constructor(texts, minAllowed, feedbackMode, submitCallback) {
             this.texts = texts;
             this.minAllowed = minAllowed;
             this.feedbackMode = feedbackMode;
+            this.submitCallback = submitCallback; // Store the callback
             this.createDialogue();
             this.addEventListeners();
         }
@@ -74,6 +75,7 @@
 
             const feedbackTitle = document.createElement('p');
             feedbackTitle.textContent = this.texts.feedbackTitle;
+            feedbackTitle.style.fontWeight = '900';
             this.feedbackStage.appendChild(feedbackTitle);
 
             this.feedbackTextArea = document.createElement('textarea');
@@ -109,24 +111,26 @@
             this.reasonStage = document.createElement('div');
             this.reasonStage.style.display = 'none';
 
-            const reasonTitle = document.createElement('p');
-            reasonTitle.style.fontWeight = '900';
-            reasonTitle.textContent = this.texts.reasonTitle;
-            this.reasonStage.appendChild(reasonTitle);
+            // Create and style the reasonTitle
+            this.reasonTitle = document.createElement('p');
+            this.reasonTitle.textContent = this.texts.reasonTitle;
+            this.reasonTitle.style.fontWeight = "900";
+            this.reasonStage.appendChild(this.reasonTitle);
 
+            // Create and style the reasonSelect dropdown
             this.reasonSelect = document.createElement('select');
             this.reasonSelect.style.width = '100%';
             this.reasonSelect.style.paddingTop = '5px';
-            this.reasonSelect.style.paddingBottom = '5px';
+            this.reasonSelect.style.paddingBottom = '10px'; // Padding to ensure space below
             this.reasonSelect.style.borderRadius = '3px';
             this.reasonSelect.style.border = '1px solid #ccc';
-            this.reasonSelect.style.marginBottom = '10px';
+            this.reasonSelect.style.marginBottom = '10px'; // Padding-bottom for the select element
 
             const defaultOption = document.createElement('option');
             defaultOption.value = '';
             defaultOption.textContent = this.texts.selectReason;
-            defaultOption.disabled = true;
-            defaultOption.selected = true;
+            defaultOption.disabled = true; // Disabled by default
+            defaultOption.selected = true; // Pre-selected option
             this.reasonSelect.appendChild(defaultOption);
 
             this.texts.reasons.forEach((reason) => {
@@ -138,6 +142,13 @@
 
             this.reasonStage.appendChild(this.reasonSelect);
 
+            // Create and style the feedbackTitle
+            this.feedbackTitle = document.createElement('p');
+            this.feedbackTitle.textContent = this.texts.feedbackTitle;
+            this.feedbackTitle.style.fontWeight = "900";
+            this.reasonStage.appendChild(this.feedbackTitle);
+
+            // Create and style the reasonFeedbackTextArea
             this.reasonFeedbackTextArea = document.createElement('textarea');
             this.reasonFeedbackTextArea.style.width = '95%';
             this.reasonFeedbackTextArea.style.height = '60px';
@@ -147,24 +158,27 @@
             this.reasonFeedbackTextArea.style.resize = 'none';
             this.reasonStage.appendChild(this.reasonFeedbackTextArea);
 
+            // Create and style the reasonSubmitButtonWrapper
             this.reasonSubmitButtonWrapper = document.createElement('div');
             this.reasonSubmitButtonWrapper.style.marginTop = '10px';
-            this.reasonSubmitButtonWrapper.style.textAlign = 'right';
+            this.reasonSubmitButtonWrapper.style.textAlign = 'right'; // Align submit button to the right
 
+            // Create and style the reasonSubmitButton
             this.reasonSubmitButton = document.createElement('button');
             this.reasonSubmitButton.textContent = this.texts.submitButtonText;
             this.reasonSubmitButton.style.padding = '5px 10px';
-            this.reasonSubmitButton.style.backgroundColor = '#666'; // Initial disabled state
-            this.reasonSubmitButton.style.color = '#666'; // Initial disabled state
+            this.reasonSubmitButton.style.backgroundColor = '#ccc';
+            this.reasonSubmitButton.style.color = '#666';
             this.reasonSubmitButton.style.border = 'none';
             this.reasonSubmitButton.style.cursor = 'not-allowed';
             this.reasonSubmitButton.style.borderRadius = '3px';
-            this.reasonSubmitButton.disabled = true;
+            this.reasonSubmitButton.disabled = true; // Disabled until a reason is selected and 35 characters are typed
 
             this.reasonSubmitButtonWrapper.appendChild(this.reasonSubmitButton);
             this.reasonStage.appendChild(this.reasonSubmitButtonWrapper);
             this.dialogue.appendChild(this.reasonStage);
         }
+
 
         addEventListeners() {
             this.stars.forEach((star, index) => {
@@ -244,6 +258,9 @@
             const feedback = this.feedbackTextArea.value;
             console.log('Rating:', rating);
             console.log('Feedback:', feedback);
+            if (typeof this.submitCallback === 'function') {
+                this.submitCallback({ rating, feedback });
+            }
             // Send this data to your server via an AJAX request, fetch, etc.
             alert(this.texts.thankYouMessage);
             this.dialogue.remove();
@@ -256,6 +273,9 @@
             console.log('Rating:', rating);
             console.log('Reason:', reason);
             console.log('Feedback:', feedback);
+            if (typeof this.submitCallback === 'function') {
+                this.submitCallback({ rating, reason, feedback });
+            }
             // Send this data to your server via an AJAX request, fetch, etc.
             alert(this.texts.thankYouMessage);
             this.dialogue.remove();
@@ -263,6 +283,19 @@
     }
 
     const feedbackMode = Math.random() < 0.5 ? 'feedbackOnly' : 'reasonWithFeedback';
+    // Define the callback function
+    function handleSubmit(data) {
+        console.log('Submitting data:', data);
+        // Here you can perform your API request, e.g., using fetch or XMLHttpRequest
+        // Example:
+        // fetch('/submit-feedback', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(data)
+        // }).then(response => response.json())
+        //   .then(result => console.log('Feedback submitted:', result))
+        //   .catch(error => console.error('Error submitting feedback:', error));
+    }
     const texts = {
         "ratingTitle": "Please rate us:",
         "feedbackTitle": "Please leave your feedback:",
@@ -280,5 +313,5 @@
         ]
     };
 
-    new FeedbackDialog(texts, 35, feedbackMode);
+    new FeedbackDialog(texts, 35, 'reasonWithFeedback'), handleSubmit;
 })();
