@@ -313,5 +313,5 @@
         ]
     };
 
-    new FeedbackDialog(texts, 35, 'reasonWithFeedback'), handleSubmit;
+    new FeedbackDialog(texts, 35, feedbackMode), handleSubmit;
 })();
