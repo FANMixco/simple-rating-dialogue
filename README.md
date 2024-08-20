@@ -1,3 +1,5 @@
+# Simple Rating Dialogue
+
 A simple rating dialogue based on HTML for collecting feedback for your websites.
 
 ![image](https://github.com/user-attachments/assets/2d53e805-5919-4bde-815b-fccaaccb890c)
