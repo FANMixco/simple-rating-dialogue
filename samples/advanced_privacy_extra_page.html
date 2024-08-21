@@ -17,7 +17,52 @@
 <head>
 </head>
 
-<body style="background-color: #232023">
+<body style="background-color: #232023; color: white">
+    <pre>
+        <code>
+// Define the callback function
+function handleSubmit(data) {
+    console.log('Submitting data:', data);
+    // Here you can perform your API request, e.g., using fetch or XMLHttpRequest
+    // Example:
+    // fetch('/submit-feedback', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(data)
+    // }).then(response => response.json())
+    //   .then(result => console.log('Feedback submitted:', result))
+    //   .catch(error => console.error('Error submitting feedback:', error));
+}
+
+const texts = {
+    "ratingTitle": "Please rate us:",
+    "feedbackTitle": "Please leave your feedback:",
+    "reasonTitle": "Why did you visit us today?",
+    "nextButtonText": "Next",
+    "submitButtonText": "Submit",
+    "closeButtonText": "Close",
+    "thankYouMessage": "Thank you for your feedback!",
+    "selectReason": "Select a reason",
+    "reasons": [
+        "Customer Support",
+        "Product Inquiry",
+        "Technical Issue",
+        "General Question",
+        "Other"
+    ],
+    "privacyOpts": {
+        "text": "&lt;a href='#' target='_blank'&gt;I agree to the terms and conditions&lt;/a&gt;",
+        "checked": true
+    },
+    "optionalPage": {
+        "text": "&lt;p&gt;Thank you! Please &lt;a href='#'&gt;click here&lt;/a&gt; to learn more.&lt;/p&gt;",
+        "closeButtonText": "Close"
+    }
+};
+
+new FeedbackDialog(texts, handleSubmit);
+        </code>
+    </pre>
 
     <script>
         // Define the callback function
