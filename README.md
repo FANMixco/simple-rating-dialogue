@@ -54,14 +54,31 @@ const texts = {
     "closeButtonText": "Close",
     "thankYouMessage": "Thank you for your feedback!",
     //Optional sections
-    "selectReason": "Select a reason",
-    "reasons": [
-        "Customer Support",
-        "Product Inquiry",
-        "Technical Issue",
-        "General Question",
-        "Other"
-    ],
+    "reasons": {
+        "text": "Select a reason",
+        "options": [
+            {
+                "value": 0,
+                "text": "Customer Support",
+            },
+            {
+                "value": 1,
+                "text": "Product Inquiry",
+            },
+            {
+                "value": 2,
+                "text": "Technical Issue",
+            },
+            {
+                "value": 3,
+                "text": "General Question",
+            },
+            {
+                "value": 4,
+                "text": "Other",
+            }
+        ]
+    },
     "privacyOpts": {
         "text": "<a href='#' target='_blank'>I agree to the terms and conditions</a>",
         "checked": true

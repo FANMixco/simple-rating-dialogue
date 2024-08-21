@@ -1,19 +1,20 @@
 <!doctype html>
 <html lang="en-US">
-    <meta charset="utf-8">
-    <meta name="author" content="Federico Navarrete">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, user-scalable=no">
-    <meta name="description" content="A Simple Rating Dialogue">
-    <meta name="keywords" content="stars,rating,dialogue">
-    <script src="../dist/rating.js"></script>
-    <title>Simple Rating Dialogue - Advanced with Privacy</title>
+<meta charset="utf-8">
+<meta name="author" content="Federico Navarrete">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, user-scalable=no">
+<meta name="description" content="A Simple Rating Dialogue">
+<meta name="keywords" content="stars,rating,dialogue">
+<script src="../dist/rating.js"></script>
+<title>Simple Rating Dialogue - Advanced with Privacy</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
-    <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+<link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
 <head>
 </head>
 
@@ -42,14 +43,31 @@
             "submitButtonText": "Submit",
             "closeButtonText": "Close",
             "thankYouMessage": "Thank you for your feedback!",
-            "selectReason": "Select a reason",
-            "reasons": [
-                "Customer Support",
-                "Product Inquiry",
-                "Technical Issue",
-                "General Question",
-                "Other"
-            ],
+            "reasons": {
+                "text": "Select a reason",
+                "options": [
+                    {
+                        "value": 0,
+                        "text": "Customer Support",
+                    },
+                    {
+                        "value": 1,
+                        "text": "Product Inquiry",
+                    },
+                    {
+                        "value": 2,
+                        "text": "Technical Issue",
+                    },
+                    {
+                        "value": 3,
+                        "text": "General Question",
+                    },
+                    {
+                        "value": 4,
+                        "text": "Other",
+                    }
+                ]
+            },
             "privacyOpts": {
                 "text": "<a href='#' target='_blank'>I agree to the terms and conditions</a>",
                 "checked": true
