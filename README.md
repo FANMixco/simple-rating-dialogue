@@ -7,6 +7,7 @@ A simple rating dialogue based on HTML for collecting feedback for your websites
 **Step 1:** Add the library:
 
 ```html
+<!--Choose your expected location-->
 <script src="js/rating.min.js"></script>
 ```
 
