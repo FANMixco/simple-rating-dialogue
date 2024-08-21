@@ -10,7 +10,7 @@ A simple rating dialogue based on HTML for collecting feedback for your websites
 
 **Step 1:** Add the library:
 
-- [Download the latest release](https://github.com/FANMixco/simple-rating-dialogue/archive/refs/tags/v1.0.3.zip)
+- [Download the latest release](https://github.com/FANMixco/simple-rating-dialogue/archive/refs/tags/v1.0.4.zip)
 
 - Install with [npm](https://www.npmjs.com/): `npm i simple-rating-dialogue`
 
