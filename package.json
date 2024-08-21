@@ -15,10 +15,6 @@
     "css",
     "js"
   ],
-  "ignore": [
-    ".gitignore",
-    "README.md"
-  ],
   "author": "Federico Navarrete",
   "license": "Apache 2.0",
   "bugs": {
