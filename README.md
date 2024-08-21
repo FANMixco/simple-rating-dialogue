@@ -73,8 +73,12 @@ new FeedbackDialog(texts, handleSubmit, settings);
 
 ### Previews
 
-![image](https://github.com/user-attachments/assets/2d53e805-5919-4bde-815b-fccaaccb890c)
+![Preview 1](https://github.com/user-attachments/assets/5a3d885c-de66-4322-b00e-da403eabed9e)
 
-![image](https://github.com/user-attachments/assets/acd84a84-ec9d-426f-b86b-9b115d91fbba)
+![Preview 2](https://github.com/user-attachments/assets/5b52d31a-d611-4842-a87a-03cc923fe911)
 
-![image](https://github.com/user-attachments/assets/12b77806-986a-4131-a6a8-f9d8c2466982)
+## Follow me on
+
+|  LinkedIn  |YouTube|Amazon|Goodreads|Instagram|Cyber Prophets|Sharing Your Stories|TikTok|
+|:----------|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+|[![LinkedIn](https://i.sstatic.net/idQWu.png)](https://www.linkedin.com/in/federiconavarrete)|[![YouTube](https://i.sstatic.net/CFPMR.png)](https://youtube.com/@FedericoNavarrete)|[![Amazon](https://i.sstatic.net/NFOeE.png)](https://www.amazon.com/Federico-Navarrete/e/B08NJTXQRV)|[![Goodreads](https://i.sstatic.net/oBk0g.jpg)](https://www.goodreads.com/author/show/21125413.Federico_Navarrete)|[![Instagram](https://i.sstatic.net/PIfqY.png)](https://www.instagram.com/federico_the_consultant)|[![RedCircle Podcast](https://i.sstatic.net/4XICF.png)](https://redcircle.com/shows/cyber-prophets)|[![RedCircle Podcast](https://i.sstatic.net/4XICF.png)](https://redcircle.com/shows/sharing-your-stories)|[![TikTok](https://i.sstatic.net/pP7X2.png)](https://www.tiktok.com/@federicostories)|
