@@ -2,14 +2,19 @@
 
 A simple rating dialogue based on HTML for collecting feedback for your websites.
 
+## Support me:
+
+[![sponsor me][2]](https://www.buymeacoffee.com/fanmixco)
+
 ## How to use it?
 
 **Step 1:** Add the library:
 
-```html
-<!--Choose your expected location-->
-<script src="js/rating.min.js"></script>
-```
+- [Download the latest release](https://github.com/FANMixco/simple-rating-dialogue/archive/refs/tags/v1.0.3.zip)
+
+- Install with [npm](https://www.npmjs.com/): `npm i simple-rating-dialogue`
+
+[![npm version](https://img.shields.io/npm/v/simple-rating-dialogue)](https://www.npmjs.com/package/simple-rating-dialogue)
 
 **Step 2:** Configure the library in the best way for you:
 
