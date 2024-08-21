@@ -10,7 +10,7 @@ A simple rating dialogue based on HTML for collecting feedback for your websites
 
 **Step 1:** Add the library:
 
-- [Download the latest release](https://github.com/FANMixco/simple-rating-dialogue/archive/refs/tags/v1.0.3.zip)
+- [Download the latest release](https://github.com/FANMixco/simple-rating-dialogue/archive/refs/tags/v1.0.4.zip)
 
 - Install with [npm](https://www.npmjs.com/): `npm i simple-rating-dialogue`
 
@@ -27,7 +27,8 @@ const settings = {
     fontFamily: 'Arial, Helvetica, sans-serif', //optional
     showOnSamePage: true, //optional
     autoSubmitMinStars: 4, //optional
-    darkMode: true //optional
+    darkMode: true, //optional
+    id: "myID" //optional
 };
 
 // Define the callback function
@@ -54,14 +55,31 @@ const texts = {
     "closeButtonText": "Close",
     "thankYouMessage": "Thank you for your feedback!",
     //Optional sections
-    "selectReason": "Select a reason",
-    "reasons": [
-        "Customer Support",
-        "Product Inquiry",
-        "Technical Issue",
-        "General Question",
-        "Other"
-    ],
+    "reasons": {
+        "text": "Select a reason",
+        "options": [
+            {
+                "value": 0,
+                "text": "Customer Support",
+            },
+            {
+                "value": 1,
+                "text": "Product Inquiry",
+            },
+            {
+                "value": 2,
+                "text": "Technical Issue",
+            },
+            {
+                "value": 3,
+                "text": "General Question",
+            },
+            {
+                "value": 4,
+                "text": "Other",
+            }
+        ]
+    },
     "privacyOpts": {
         "text": "<a href='#' target='_blank'>I agree to the terms and conditions</a>",
         "checked": true
@@ -69,8 +87,7 @@ const texts = {
     "optionalPage": {
         "text": "<p>Thank you! Please <a href='#'>click here</a> to learn more.</p>",
         "closeButtonText": "Close"
-    },
-    "id", "myID"
+    }
 };
 
 //Start the dialogue

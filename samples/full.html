@@ -7,7 +7,7 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, user-scalable=no">
     <meta name="description" content="A Simple Rating Dialogue">
     <meta name="keywords" content="stars,rating,dialogue">
-    <script src="../dist/rating.min.js"></script>
+    <script src="../dist/rating.js"></script>
     <title>Simple Rating Dialogue - Full</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
@@ -89,14 +89,31 @@ new FeedbackDialog(texts, handleSubmit, settings);
             "submitButtonText": "Submit",
             "closeButtonText": "Close",
             "thankYouMessage": "Thank you for your feedback!",
-            "selectReason": "Select a reason",
-            "reasons": [
-                "Customer Support",
-                "Product Inquiry",
-                "Technical Issue",
-                "General Question",
-                "Other"
-            ],
+            "reasons": {
+                "text": "Select a reason",
+                "options": [
+                    {
+                        "value": 0,
+                        "text": "Customer Support",
+                    },
+                    {
+                        "value": 1,
+                        "text": "Product Inquiry",
+                    },
+                    {
+                        "value": 2,
+                        "text": "Technical Issue",
+                    },
+                    {
+                        "value": 3,
+                        "text": "General Question",
+                    },
+                    {
+                        "value": 4,
+                        "text": "Other",
+                    }
+                ]
+            },
             "privacyOpts": {
                 "text": "<a href='#' target='_blank'>I agree to the terms and conditions</a>",
                 "checked": true

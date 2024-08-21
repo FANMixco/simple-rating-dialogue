@@ -1,6 +1,6 @@
 {
   "name": "simple-rating-dialogue",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "A simple rating dialogue based on HTML for collecting feedback for your websites.",
   "main": "./dist/rating.js",
   "repository": {
@@ -14,10 +14,6 @@
     "html",
     "css",
     "js"
-  ],
-  "ignore": [
-    ".gitignore",
-    "README.md"
   ],
   "author": "Federico Navarrete",
   "license": "Apache 2.0",

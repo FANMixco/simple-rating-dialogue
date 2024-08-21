@@ -43,8 +43,8 @@ class FeedbackDialog {
             return;
         }
 
-        if (texts.reasons || texts.selectReason) {
-            if (!(texts.reasons || texts.selectReason)) {
+        if (texts.reasons) {
+            if (!(texts.reasons.text || texts.reasons.options)) {
                 console.error('Reasons are incorrect!');
                 return;
             }
@@ -212,15 +212,15 @@ class FeedbackDialog {
 
             const defaultOption = document.createElement('option');
             defaultOption.value = '';
-            defaultOption.textContent = this.texts.selectReason;
+            defaultOption.textContent = this.texts.reasons.text;
             defaultOption.disabled = true; // Disabled by default
             defaultOption.selected = true; // Pre-selected option
             this.reasonSelect.appendChild(defaultOption);
 
-            this.texts.reasons.forEach((reason) => {
+            this.texts.reasons.options.forEach((reason) => {
                 const option = document.createElement('option');
-                option.value = reason;
-                option.textContent = reason;
+                option.value = reason.value;
+                option.textContent = reason.text;
                 this.reasonSelect.appendChild(option);
             });
 
@@ -321,10 +321,6 @@ class FeedbackDialog {
     handleStarClick(index) {
         this.closeButtonWrapper.style.display = 'none';
         this.handleStarHover(index);
-        /*this.stars.forEach((star, i) => {
-            star.textContent = i <= index ? '★' : '☆';
-            star.style.color = i <= index ? '#ff9800' : '#ccc';
-        });*/
 
         const selectedStars = index + 1; // Because index is zero-based
 
@@ -417,7 +413,7 @@ class FeedbackDialog {
             if (!this.texts.reasons) {
                 this.submitCallback({ rating, feedback });
             } else {
-                const reason = this.reasonSelect.value;
+                const reason = this.reasonSelect;
                 this.submitCallback({ rating, reason, feedback });
             }
         }
