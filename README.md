@@ -27,7 +27,8 @@ const settings = {
     fontFamily: 'Arial, Helvetica, sans-serif', //optional
     showOnSamePage: true, //optional
     autoSubmitMinStars: 4, //optional
-    darkMode: true //optional
+    darkMode: true, //optional
+    id: "myID" //optional
 };
 
 // Define the callback function
@@ -86,8 +87,7 @@ const texts = {
     "optionalPage": {
         "text": "<p>Thank you! Please <a href='#'>click here</a> to learn more.</p>",
         "closeButtonText": "Close"
-    },
-    "id", "myID"
+    }
 };
 
 //Start the dialogue
