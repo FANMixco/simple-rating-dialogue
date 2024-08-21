@@ -26,3 +26,8 @@ th, td {
 th {
     background-color: #512da8;
 }
+
+footer {
+    text-align: center;
+    padding-top: 15px;
+}

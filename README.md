@@ -64,7 +64,8 @@ const texts = {
     "optionalPage": {
         "text": "<p>Thank you! Please <a href='#'>click here</a> to learn more.</p>",
         "closeButtonText": "Close"
-    }
+    },
+    "id", "myID"
 };
 
 //Start the dialogue

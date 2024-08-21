@@ -118,6 +118,8 @@ class FeedbackDialog {
         this.dialogue.style.color = this.modeStyles.textColor;
         this.dialogue.style.fontFamily = (!this.settings.fontFamily) ? 'Arial, Helvetica, sans-serif' : this.settings.fontFamily;
 
+        this.dialogue.id = (this.settings.id) ? this.settings.id : 'feedbackDialogue';
+
         this.dialogue.style.position = 'fixed';
         this.dialogue.style.bottom = window.innerWidth <= 768 ? '10px' : '20px';
         this.dialogue.style.right = window.innerWidth <= 768 ? '10px' : '20px';

@@ -1,0 +1,28 @@
+{
+  "name": "simple-rating-dialogue",
+  "version": "1.0.3",
+  "description": "A simple rating dialogue based on HTML for collecting feedback for your websites.",
+  "main": "./dist/rating.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FANMixco/simple-rating-dialogue.git"
+  },
+  "keywords": [
+    "rating",
+    "modal",
+    "dialogue",
+    "html",
+    "css",
+    "js"
+  ],
+  "ignore": [
+    ".gitignore",
+    "README.md"
+  ],
+  "author": "Federico Navarrete",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/FANMixco/simple-rating-dialogue/issues"
+  },
+  "homepage": "https://github.com/FANMixco/simple-rating-dialogue#readme"
+}
