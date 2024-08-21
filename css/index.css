@@ -1,0 +1,28 @@
+body {
+    background-color: #232023;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    color: skyblue;
+}
+
+/* Basic table styling */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #512da8;
+}
