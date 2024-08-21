@@ -13,11 +13,16 @@ A simple rating dialogue based on HTML for collecting feedback for your websites
 **Step 2:** Configure the library in the best way for you:
 
 ```js
-// Set the minimum number of characters expected to accept an answer
-const minAllowed = 35;
-
-// Define the mode that you want with reason or not
-const feedbackMode = Math.random() < 0.5 ? 'feedbackOnly' : 'reasonWithFeedback';
+// Configured the settings
+const settings = {
+    numberStars: 5,
+    minCharsAllowed: 35,
+    starSize: 48, //optional
+    fontFamily: 'Arial, Helvetica, sans-serif', //optional
+    showOnSamePage: true, //optional
+    autoSubmitMinStars: 4, //optional
+    darkMode: true //optional
+};
 
 // Define the callback function
 function handleSubmit(data) {
@@ -40,7 +45,9 @@ const texts = {
     "reasonTitle": "Why did you visit us today?",
     "nextButtonText": "Next",
     "submitButtonText": "Submit",
+    "closeButtonText": "Close",
     "thankYouMessage": "Thank you for your feedback!",
+    //Optional sections
     "selectReason": "Select a reason",
     "reasons": [
         "Customer Support",
@@ -48,11 +55,19 @@ const texts = {
         "Technical Issue",
         "General Question",
         "Other"
-    ]
+    ],
+    "privacyOpts": {
+        "text": "<a href='#' target='_blank'>I agree to the terms and conditions</a>",
+        "checked": true
+    },
+    "optionalPage": {
+        "text": "<p>Thank you! Please <a href='#'>click here</a> to learn more.</p>",
+        "closeButtonText": "Close"
+    }
 };
 
 //Start the dialogue
-new FeedbackDialog(texts, minAllowed, feedbackMode, handleSubmit);
+new FeedbackDialog(texts, handleSubmit, settings);
 ```
 
 ### Previews
