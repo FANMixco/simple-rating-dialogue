@@ -1,6 +1,6 @@
 {
   "name": "simple-rating-dialogue",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple rating dialogue based on HTML for collecting feedback for your websites.",
   "main": "./dist/rating.js",
   "repository": {

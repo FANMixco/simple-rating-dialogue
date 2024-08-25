@@ -7,3 +7,4 @@ index.html
 .gitignore
 README.md
 site.webmanifest
+dist/rating.js
