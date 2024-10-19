@@ -14,7 +14,9 @@ A simple rating dialogue based on HTML for collecting feedback for your websites
 
 - Install with [npm](https://www.npmjs.com/): `npm i simple-rating-dialogue`
 
-[![npm version](https://img.shields.io/npm/v/simple-rating-dialogue)](https://www.npmjs.com/package/simple-rating-dialogue)
+|Latest Release|Downloads|
+|:------------:|:------------:|
+|[![npm version](https://img.shields.io/npm/v/simple-rating-dialogue)](https://www.npmjs.com/package/simple-rating-dialogue)|[![NuGet Badge SpotsDialog.Xamarin](https://img.shields.io/npm/dt/simple-rating-dialogue)](https://www.npmjs.com/package/simple-rating-dialogue/)|
 
 **Step 2:** Configure the library in the best way for you:
 
